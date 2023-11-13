@@ -25,6 +25,8 @@ export default function Login() {
     alert("Register Successfully");
   };
 
+
+  // validations
   const initialValues = {
     firstname: "",
     lastname: "",
@@ -85,7 +87,7 @@ export default function Login() {
                   <input
                     type="text"
                     className="form-control"
-                    style={{ border: "solid #d4d4d4 1px" }}
+                    style={errors.firstname ? {border: "solid red 1px"} : { border: "solid #d4d4d4 1px" }}
                     autoComplete="off"
                     name="firstname"
                     id="firstname"
@@ -106,7 +108,7 @@ export default function Login() {
                   <input
                     type="text"
                     className="form-control"
-                    style={{ border: "solid #d4d4d4 1px" }}
+                    style={errors.lastname ? {border: "solid red 1px"} :{ border: "solid #d4d4d4 1px" }}
                     autoComplete="off"
                     name="lastname"
                     id="lastname"
@@ -127,7 +129,7 @@ export default function Login() {
                   <input
                     type="text"
                     className="form-control"
-                    style={{ border: "solid #d4d4d4 1px" }}
+                    style={errors.username ? {border: "solid red 1px"} :{ border: "solid #d4d4d4 1px" }}
                     autoComplete="off"
                     name="username"
                     id="username"
@@ -148,7 +150,7 @@ export default function Login() {
                   <input
                     type="email"
                     className="form-control"
-                    style={{ border: "solid #d4d4d4 1px" }}
+                    style={errors.email ? {border: "solid red 1px"} :{ border: "solid #d4d4d4 1px" }}
                     autoComplete="off"
                     id="email"
                     name="email"
@@ -169,7 +171,7 @@ export default function Login() {
                   <input
                     type={showPassword ? "text" : "password"}
                     className="form-control"
-                    style={{ border: "solid #d4d4d4 1px" }}
+                    style={errors.password ? {border: "solid red 1px"} :{ border: "solid #d4d4d4 1px" }}
                     autoComplete="off"
                     id="password"
                     name="password"
@@ -207,7 +209,7 @@ export default function Login() {
                 </div>
                 {/* Submit button */}
                 <button
-                  href="#"
+                  href="#!"
                   type="submit"
                   className="btn btn-dark btn-block mb-1"
                   style={{ width: "100%" }}

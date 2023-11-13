@@ -81,7 +81,7 @@ export default function Login() {
                   <input
                     type="name"
                     className="form-control"
-                    style={{ border: "solid #d4d4d4 1px" }}
+                    style={errors.username ? {border: "solid red 2px"} :{ border: "solid #d4d4d4 1px" }}
                     id="username"
                     name="username"
                     placeholder="username"
@@ -101,7 +101,7 @@ export default function Login() {
                   <input
                     type={showPassword ? "text" : "password"}
                     className="form-control"
-                    style={""? {border: "red"}:{ border: "solid #d4d4d4 1px" }}
+                    style={errors.password ? {border: "solid red 2px"} :{ border: "solid #d4d4d4 1px" }}
                     id="password"
                     name="password"
                     placeholder="Password"
@@ -143,7 +143,6 @@ export default function Login() {
                 </div>
                 {/* Submit button */}
                 <button
-                  // href="#"
                   type="submit"
                   className="btn btn-dark px-5"
                   style={{ width: "100%" }}
