@@ -12,16 +12,16 @@ export default function Home() {
           <img src="" alt="" />
           <ul>
             <li>
-              <a href="" className="cursor-scale small">Home</a>
+              <a href="" className="cursor-scale small Nav">Home</a>
             </li>
             <li>
-              <a href="" className="cursor-scale small">About</a>
+              <a href="" className="cursor-scale small Nav">About</a>
             </li>
             <li>
-              <a href="" className="cursor-scale small">Contact</a>
+              <a href="" className="cursor-scale small Nav">Contact</a>
             </li>
             <li>
-              <a href="" className="cursor-scale small" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <a href="" className="cursor-scale small Nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Login/Register
               </a>
             </li>
