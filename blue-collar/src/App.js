@@ -29,7 +29,8 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About"
-import Login from "./Components/Login/Login";
+import Login from "./Components/Login/Login"
+import RegistrationForm from "./Components/Login/Registrationform";
 import WorkerList from "./Components/WorkerList/WorkerList";
 import Location from "./Components/Location/Location";
 import Cards from "./Components/Cards/Cards";
@@ -104,6 +105,7 @@ function App() {
       <Location/>
       <About/>
       <Login/>
+      <RegistrationForm/>
       {/* <WorkerList /> */}
       <Cards />
       <Footer />

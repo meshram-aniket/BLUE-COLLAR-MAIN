@@ -17,9 +17,9 @@ export default function WorkerList() {
     // background: "linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%)"
   };
 
-  const fontSize = {
-    fontSize: "100px",
-  };
+  // const fontSize = {
+  //   fontSize: "100px",
+  // };
 
   const styles = {
     cardImgTop: {
