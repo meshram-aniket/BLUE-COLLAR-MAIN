@@ -1,20 +1,26 @@
-// import logo from './logo.svg';
 // import './App.css';
-// import Home from "./Components/Home/Home"
-// // import Services from './Components/Services/Services';
+
+
+
+// // components 
+// import Home from "./Components/Home/Home";
+// import Login from "./Components/Login/Login";
+// import Registration from "./Components/Login/Registrationform";
+// import About from "./Components/About/About";
+// import Services from './Components/Services/Services';
 // import Footer from "./Components/Footer/Footer"
-// import Cards from "./Components/Cards/Cards"
-// import Login from "./Components/Login/Login"
-// import About from './Components/About/About';
+// import WorkerList from "./Components/WorkerList/WorkerList"
 
 // function App() {
 //   return (
 //     <>
 //     <Home/>
-//     {/* <Services/> */}
-//     {/* <Cards/> */}
-//     {/* <Footer/> */}
-//     <About/>
+//     <Login/>
+//     <Registration/>
+//     {/* <About/> */}
+//     {/* <WorkerList/> */}
+//     <Services/>
+//     <Footer/>
 
 //     </>
 //   );
@@ -24,16 +30,16 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { gsap, CSSPlugin, Expo } from "gsap";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
-// import CursorPointer from "./Components/Cursor";
 
+
+// components 
 import Home from "./Components/Home/Home";
-import About from "./Components/About/About"
-import Login from "./Components/Login/Login"
+import About from "./Components/About/About";
+import Login from "./Components/Login/Login";
 import RegistrationForm from "./Components/Login/Registrationform";
 import WorkerList from "./Components/WorkerList/WorkerList";
 import Location from "./Components/Location/Location";
-import Cards from "./Components/Cards/Cards";
+import Services from "./Components/Services/Services";
 import Footer from "./Components/Footer/Footer";
 gsap.registerPlugin(CSSPlugin);
 
@@ -80,6 +86,9 @@ function App() {
       });
   };
 
+
+
+
   return (
     <>
       <AppContainer>
@@ -100,14 +109,13 @@ function App() {
         </Content>
       </AppContainer>
 
-
       {/* components */}
-      <Location/>
-      <About/>
-      <Login/>
-      <RegistrationForm/>
-      {/* <WorkerList /> */}
-      <Cards />
+      <Location />
+      {/* <About /> */}
+      <Login />
+      <RegistrationForm />
+      <WorkerList/>
+      <Services />
       <Footer />
 
      

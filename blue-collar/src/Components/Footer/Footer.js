@@ -6,7 +6,6 @@ import gsap from "gsap";
 // import 'bootstrap/dist/js/bootstrap.bundle.min.js';  //Import Bootstrap JS
 
 export default function Footer() {
-
   useEffect(() => {
     let cursor = document.querySelector(".cursor");
     let cursorScale = document.querySelectorAll(".cursor-scale");
@@ -48,13 +47,15 @@ export default function Footer() {
     <>
       {/* <div className="cursor"></div> */}
       {/* Footer */}
-      <footer className=" text-center text-lg-start bg-light text-muted">
+      <footer className=" text-center text-lg-start bg-dark text-muted">
         <div className="cursor"></div>
         {/* Section: Social media */}
         <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom footer">
           {/* Left */}
           <div className="me-5 d-none d-lg-block">
-            <span className="cursor-scale small">Get connected with us on social networks:</span>
+            <span className="cursor-scale small">
+              Get connected with us on social networks:
+            </span>
           </div>
           {/* Left */}
           {/* Right */}
@@ -103,7 +104,9 @@ export default function Footer() {
               {/* Grid column */}
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                 {/* Links */}
-                <h6 className="text-uppercase fw-bold mb-4 cursor-scale">Products</h6>
+                <h6 className="text-uppercase fw-bold mb-4 cursor-scale">
+                  Products
+                </h6>
                 <p>
                   <a href="#!" className="text-reset cursor-scale small">
                     Angular
@@ -129,7 +132,9 @@ export default function Footer() {
               {/* Grid column */}
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                 {/* Links */}
-                <h6 className="text-uppercase fw-bold mb-4 cursor-scale ">Useful links</h6>
+                <h6 className="text-uppercase fw-bold mb-4 cursor-scale ">
+                  Useful links
+                </h6>
                 <p>
                   <a href="#!" className="text-reset cursor-scale small">
                     Pricing
@@ -155,19 +160,24 @@ export default function Footer() {
               {/* Grid column */}
               <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                 {/* Links */}
-                <h6 className="text-uppercase fw-bold mb-4 cursor-scale ">Contact</h6>
+                <h6 className="text-uppercase fw-bold mb-4 cursor-scale ">
+                  Contact
+                </h6>
                 <p className="cursor-scale small">
-                  <i className="fas fa-home me-3 cursor-scale small" /> New York, NY 10012, US
+                  <i className="fas fa-home me-3 cursor-scale small" /> New
+                  York, NY 10012, US
                 </p>
                 <p className="cursor-scale small">
                   <i className="fas fa-envelope me-3 cursor-scale small" />
                   info@example.com
-                </p >
-                <p className="cursor-scale small">
-                  <i className="fas fa-phone me-3 cursor-scale small" /> + 01 234 567 88
                 </p>
                 <p className="cursor-scale small">
-                  <i className="fas fa-print me-3 cursor-scale small" /> + 01 234 567 89
+                  <i className="fas fa-phone me-3 cursor-scale small" /> + 01
+                  234 567 88
+                </p>
+                <p className="cursor-scale small">
+                  <i className="fas fa-print me-3 cursor-scale small" /> + 01
+                  234 567 89
                 </p>
               </div>
               {/* Grid column */}
@@ -183,7 +193,10 @@ export default function Footer() {
           style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
         >
           © 2021 Copyright:
-          <a className="text-reset fw-bold cursor-scale small" href="https://mdbootstrap.com/">
+          <a
+            className="text-reset fw-bold cursor-scale small"
+            href="https://mdbootstrap.com/"
+          >
             MDBootstrap.com
           </a>
         </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-
 import { useFormik } from "formik";
 import { regSchema } from "../../Schemas";
 
@@ -18,13 +17,10 @@ export default function Login() {
     setShowPassword(!showPassword);
   };
 
-  
-
   //   Register alert
   const registerAlert = () => {
-    alert("Register Successfully");
+    alert("Clicked on the link send on the email for confirmation");
   };
-
 
   // validations
   const initialValues = {
@@ -42,16 +38,22 @@ export default function Login() {
       onSubmit: (values, action) => {
         console.log("🚀 ~ file: Login.js:51 ~ Login ~ value̥s:", values);
         action.resetForm();
-        if(values.firstname !== "" && values.lastname !== "" && values.username !== "" && values.email !== "" && values.password !== "") {
-          registerAlert()
+        if (
+          values.firstname !== "" &&
+          values.lastname !== "" &&
+          values.username !== "" &&
+          values.email !== "" &&
+          values.password !== ""
+        ) {
+          registerAlert();
         }
       },
     });
   console.log("🚀 ~ file: Login.js:50 ~ Login ~ err̥ors:", errors);
 
+
   return (
     <>
-
       {/* Register Modal */}
       <div
         className="modal fade"
@@ -63,10 +65,7 @@ export default function Login() {
         <div className="modal-dialog" style={{ width: 500, height: 600 }}>
           <div className="modal-content">
             <div className="modal-header">
-              <h1
-                className="modal-title text-center fs-5"
-                id="Register"
-              >
+              <h1 className="modal-title text-center fs-5" id="Register">
                 Register
               </h1>
               <button
@@ -87,7 +86,11 @@ export default function Login() {
                   <input
                     type="text"
                     className="form-control"
-                    style={errors.firstname ? {border: "solid red 1px"} : { border: "solid #d4d4d4 1px" }}
+                    style={
+                      errors.firstname && touched.firstname
+                        ? { border: "solid red 2px" }
+                        : { border: "solid #d4d4d4 1px" }
+                    }
                     autoComplete="off"
                     name="firstname"
                     id="firstname"
@@ -108,7 +111,11 @@ export default function Login() {
                   <input
                     type="text"
                     className="form-control"
-                    style={errors.lastname ? {border: "solid red 1px"} :{ border: "solid #d4d4d4 1px" }}
+                    style={
+                      errors.lastname && touched.lastname
+                        ? { border: "solid red 2px" }
+                        : { border: "solid #d4d4d4 1px" }
+                    }
                     autoComplete="off"
                     name="lastname"
                     id="lastname"
@@ -118,7 +125,9 @@ export default function Login() {
                     onBlur={handleBlur}
                   />
                   {errors.lastname && touched.lastname ? (
-                    <p className="form-error text-danger text-danger">{errors.lastname}</p>
+                    <p className="form-error text-danger text-danger">
+                      {errors.lastname}
+                    </p>
                   ) : null}
                 </div>
                 {/* Username input */}
@@ -129,7 +138,11 @@ export default function Login() {
                   <input
                     type="text"
                     className="form-control"
-                    style={errors.username ? {border: "solid red 1px"} :{ border: "solid #d4d4d4 1px" }}
+                    style={
+                      errors.username && touched.username
+                        ? { border: "solid red 2px" }
+                        : { border: "solid #d4d4d4 1px" }
+                    }
                     autoComplete="off"
                     name="username"
                     id="username"
@@ -150,7 +163,11 @@ export default function Login() {
                   <input
                     type="email"
                     className="form-control"
-                    style={errors.email ? {border: "solid red 1px"} :{ border: "solid #d4d4d4 1px" }}
+                    style={
+                      errors.email && touched.email
+                        ? { border: "solid red 2px" }
+                        : { border: "solid #d4d4d4 1px" }
+                    }
                     autoComplete="off"
                     id="email"
                     name="email"
@@ -171,7 +188,11 @@ export default function Login() {
                   <input
                     type={showPassword ? "text" : "password"}
                     className="form-control"
-                    style={errors.password ? {border: "solid red 1px"} :{ border: "solid #d4d4d4 1px" }}
+                    style={
+                      errors.password && touched.password
+                        ? { border: "solid red 2px" }
+                        : { border: "solid #d4d4d4 1px" }
+                    }
                     autoComplete="off"
                     id="password"
                     name="password"
@@ -216,6 +237,7 @@ export default function Login() {
                 >
                   Register
                 </button>
+
 
                 <div className="text-center mb-3">
                   <p className="text-center mb-1">or:</p>

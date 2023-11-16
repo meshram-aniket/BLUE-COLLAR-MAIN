@@ -1,33 +1,46 @@
 import React from "react";
 import "./Home.css";
-// import  TweenMax  from "gsap/gsap-core";
 import Marquee from "react-fast-marquee";
 
 export default function Home() {
   return (
     <section>
-      {/* <div className="cursor"></div> */}
       <div className="containers" id="containers">
         <nav>
           <img src="" alt="" />
           <ul>
             <li>
-              <a href="" className="cursor-scale small Nav">Home</a>
+              <a href="" className="cursor-scale small Nav">
+                Home
+              </a>
             </li>
             <li>
-              <a href="" className="cursor-scale small Nav">About</a>
+              <a href="" className="cursor-scale small Nav">
+                About
+              </a>
             </li>
             <li>
-              <a href="" className="cursor-scale small Nav">Contact</a>
+              <a href="" className="cursor-scale small Nav">
+                Contact
+              </a>
             </li>
             <li>
-              <a href="" className="cursor-scale small Nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <a
+                href=""
+                className="cursor-scale small Nav"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
                 Login/Register
               </a>
             </li>
           </ul>
+
+          {/* logo  */}
           <img src="" alt="" />
+          
         </nav>
+
         <div className="text-box">
           <h2>Lorem ipsum </h2>
           <h1>Blue Collar</h1>

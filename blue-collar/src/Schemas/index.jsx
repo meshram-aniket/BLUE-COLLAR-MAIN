@@ -1,13 +1,36 @@
 import * as Yup from "yup";
 
-const passwordRules = /~`!@#$%^&*()_-+={[}]|\:;"'<,>.?[a-z][A-Z]/;
-
 export const regSchema = Yup.object({
   firstname: Yup.string()
     .min(2)
     .max(25)
+    .test(
+      "capitalized",
+      "First letter should be capitalized",
+      function (value) {
+        // Custom validation function to check if the first letter is capitalized
+        if (value && value.length > 0) {
+          return value[0] === value[0].toUpperCase();
+        }
+        return false;
+      }
+    )
     .required("Please enter your first name"),
-  lastname: Yup.string().min(2).max(25).required("Please enter your last name"),
+  lastname: Yup.string()
+    .min(2)
+    .max(25)
+    .test(
+      "capitalized",
+      "First letter should be capitalized",
+      function (value) {
+        // Custom validation function to check if the first letter is capitalized
+        if (value && value.length > 0) {
+          return value[0] === value[0].toUpperCase();
+        }
+        return false;
+      }
+    )
+    .required("Please enter your last name"),
   username: Yup.string().min(2).max(25).required("Please enter your user name"),
   email: Yup.string().email().required("Please enter your email"),
   password: Yup.string()

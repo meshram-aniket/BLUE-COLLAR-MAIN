@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import { signUpSchema } from "../../Schemas";
 
+
 export default function Login() {
 
   // const [password, setPassword] = useState("");
@@ -46,8 +47,6 @@ export default function Login() {
   console.log(errors);
 
 
-  
-
   return (
     <>
       {/* Login Modal */}
@@ -81,8 +80,9 @@ export default function Login() {
                   <input
                     type="name"
                     className="form-control"
-                    style={errors.username ? {border: "solid red 2px"} :{ border: "solid #d4d4d4 1px" }}
-                    id="username"
+                    style={errors.username && touched.username ? {border: "solid red 2px"} :{ border: "solid #d4d4d4 1px" }}
+                    autoComplete="off"
+                    id="username validationCustom01"
                     name="username"
                     placeholder="username"
                     value={values.username}
@@ -101,7 +101,8 @@ export default function Login() {
                   <input
                     type={showPassword ? "text" : "password"}
                     className="form-control"
-                    style={errors.password ? {border: "solid red 2px"} :{ border: "solid #d4d4d4 1px" }}
+                    style={errors.password && touched.password ? {border: "solid red 2px"} :{ border: "solid #d4d4d4 1px" }}
+                    autoComplete="off"
                     id="password"
                     name="password"
                     placeholder="Password"
@@ -143,8 +144,9 @@ export default function Login() {
                 </div>
                 {/* Submit button */}
                 <button
+                  href="#!"
                   type="submit"
-                  className="btn btn-dark px-5"
+                  className="btn btn-dark button-block px-5"
                   style={{ width: "100%" }}
                 >
                   Sign in
