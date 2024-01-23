@@ -38,7 +38,7 @@ import About from "./Components/About/About";
 import Login from "./Components/Login/Login";
 import RegistrationForm from "./Components/Login/Registrationform";
 import WorkerList from "./Components/WorkerList/WorkerList";
-import Location from "./Components/Location/Location";
+// import Location from "./Components/Location/Location";
 import Services from "./Components/Services/Services";
 import Footer from "./Components/Footer/Footer";
 gsap.registerPlugin(CSSPlugin);
@@ -87,6 +87,9 @@ function App() {
   };
 
 
+  const userLatitude = 19.15818609743528;
+  const userLongitude =  73.23539990424443;
+
 
 
   return (
@@ -110,11 +113,11 @@ function App() {
       </AppContainer>
 
       {/* components */}
-      <Location />
+      {/* <Location /> */}
       {/* <About /> */}
       <Login />
       <RegistrationForm />
-      <WorkerList/>
+      <WorkerList userLatitude={userLatitude} userLongitude={userLongitude}/>
       <Services />
       <Footer />
 

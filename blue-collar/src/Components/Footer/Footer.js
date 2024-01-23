@@ -47,7 +47,7 @@ export default function Footer() {
     <>
       {/* <div className="cursor"></div> */}
       {/* Footer */}
-      <footer className=" text-center text-lg-start bg-dark text-muted">
+      <footer className=" text-center text-lg-start bg-light text-muted cursor-scale small">
         <div className="cursor"></div>
         {/* Section: Social media */}
         <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom footer">

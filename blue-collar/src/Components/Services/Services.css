@@ -85,7 +85,7 @@
     animation:showcontent 1s ease-in-out 1 forwards
 }
 .item .des{
-    /* width: 20%; */
+    width: 30%;
     margin:20px 0;
     opacity: 0;
     animation:showcontent 1s ease-in-out 0.3s 1 forwards

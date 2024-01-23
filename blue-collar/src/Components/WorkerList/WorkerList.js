@@ -100,7 +100,7 @@ export default function WorkerList() {
           Worker List
         </h1>
         <div className="row row-cols-1 row-cols-md-3 g-4 py-4">
-          <div className="col py-4 px-4 " >
+          <div className="col py-4 px-4" >
             <div className="card" style={styles.card}>
               <img
                 src="https://source.unsplash.com/600x400/?worker"
@@ -108,7 +108,7 @@ export default function WorkerList() {
                 style={styles.cardImgTop}
                 alt="..."
               />
-              <div className="card-body" style={styles.cardBody}>
+              <div className="card-body " style={styles.cardBody}>
                 <h5 className="card-title" style={styles.heading}>
                   Name
                 </h5>
